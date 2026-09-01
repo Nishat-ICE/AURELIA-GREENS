@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Plant Library | Aurelia Greens</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            <span>✦</span>
+            AURELIA GREENS
+        </a>
+
+        <input type="checkbox" id="menu-toggle">
+
+        <label for="menu-toggle" class="menu-icon">
+            ☰
+        </label>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="plants.html" class="active">
+                Plants
+            </a>
+
+            <a href="care.html">
+                Plant Care
+            </a>
+
+            <a href="quiz.html">
+                Plant Quiz
+            </a>
+
+            <a href="journal.html">
+                Journal
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<section class="page-hero">
+
+    <span class="eyebrow">
+        PLANT LIBRARY
+    </span>
+
+    <h1>
+        Know your
+        <em>plants.</em>
+    </h1>
+
+    <p>
+        Explore plants and learn what they need
+        to grow beautifully in your space.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     PLANT LIBRARY
+===================================================== -->
+
+<section class="section">
+
+
+    <!-- SEARCH -->
+
+    <div class="plant-search">
+
+        <div class="search-box">
+
+            <span class="search-icon">
+                🔍
+            </span>
+
+            <input
+                type="text"
+                id="plantSearch"
+                placeholder="Search a plant by name...">
+
+        </div>
+
+        <p id="searchMessage">
+            Explore our plant collection
+        </p>
+
+    </div>
+
+
+
+    <!-- CATEGORY -->
+
+    <div class="category-bar">
+
+        <span>
+            All Plants
+        </span>
+
+        <span>
+            Indoor
+        </span>
+
+        <span>
+            Low Light
+        </span>
+
+        <span>
+            Beginner Friendly
+        </span>
+
+        <span>
+            Air Purifying
+        </span>
+
+        <span>
+            Pet Friendly
+        </span>
+
+    </div>
+
+
+
+    <!-- PLANT GRID -->
+
+    <div class="plant-grid large-grid"
+         id="plantGrid">
+
+
+
+        <!-- =================================================
+             MONSTERA
+        ================================================== -->
+
+        <article class="plant-card"
+                 data-name="monstera deliciosa monstera">
+
+            <div class="plant-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Monstera%20deliciosa.jpg"
+                    alt="Monstera Deliciosa">
+
+                <span class="plant-tag">
+                    EASY CARE
+                </span>
+
+            </div>
+
+            <div class="plant-info">
+
+                <span class="plant-type">
+                    TROPICAL
+                </span>
+
+                <h3>
+                    Monstera Deliciosa
+                </h3>
+
+                <p>
+                    Bright indirect light · Moderate water
+                </p>
+
+                <a
+                    href="plant-details.html?plant=monstera"
+                    class="text-link">
+
+                    Learn about Monstera →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SNAKE PLANT
+        ================================================== -->
+
+        <article class="plant-card"
+                 data-name="snake plant sansevieria">
+
+            <div class="plant-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Snake%20plant%20%28Sansevieria%20trifasciata%29.jpg"
+                    alt="Snake Plant">
+
+                <span class="plant-tag">
+                    BEGINNER
+                </span>
+
+            </div>
+
+            <div class="plant-info">
+
+                <span class="plant-type">
+                    LOW LIGHT
+                </span>
+
+                <h3>
+                    Snake Plant
+                </h3>
+
+                <p>
+                    Low to bright light · Low water
+                </p>
+
+                <a
+                    href="plant-details.html?plant=snake"
+                    class="text-link">
+
+                    Learn about Snake Plant →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             FIDDLE LEAF FIG
+        ================================================== -->
+
+        <article class="plant-card"
+                 data-name="fiddle leaf fig fig">
+
+            <div class="plant-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ficus%20lyrata%20DSCN4457.jpg"
+                    alt="Fiddle Leaf Fig">
+
+                <span class="plant-tag">
+                    STATEMENT
+                </span>
+
+            </div>
+
+            <div class="plant-info">
+
+                <span class="plant-type">
+                    INDOOR
+                </span>
+
+                <h3>
+                    Fiddle Leaf Fig
+                </h3>
+
+                <p>
+                    Bright light · Regular watering
+                </p>
+
+                <a
+                    href="plant-details.html?plant=fig"
+                    class="text-link">
+
+                    Learn about Fiddle Leaf Fig →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             PEACE LILY
+        ================================================== -->
+
+        <article class="plant-card"
+                 data-name="peace lily">
+
+            <div class="plant-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Peace%20lily%20--%20Spathiphyllum.jpg"
+                    alt="Peace Lily">
+
+                <span class="plant-tag">
+                    FLOWERING
+                </span>
+
+            </div>
+
+            <div class="plant-info">
+
+                <span class="plant-type">
+                    AIR PURIFYING
+                </span>
+
+                <h3>
+                    Peace Lily
+                </h3>
+
+                <p>
+                    Medium indirect light · Moist soil
+                </p>
+
+                <a
+                    href="plant-details.html?plant=peace"
+                    class="text-link">
+
+                    Learn about Peace Lily →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             SUCCULENT
+        ================================================== -->
+
+        <article class="plant-card"
+                 data-name="succulent">
+
+            <div class="plant-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Succulentplant.jpg"
+                    alt="Succulent">
+
+                <span class="plant-tag">
+                    LOW WATER
+                </span>
+
+            </div>
+
+            <div class="plant-info">
+
+                <span class="plant-type">
+                    DESERT
+                </span>
+
+                <h3>
+                    Succulent
+                </h3>
+
+                <p>
+                    Bright light · Infrequent watering
+                </p>
+
+                <a
+                    href="plant-details.html?plant=succulent"
+                    class="text-link">
+
+                    Learn about Succulent →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             CALATHEA
+        ================================================== -->
+
+        <article class="plant-card"
+                 data-name="calathea orbifolia calathea">
+
+            <div class="plant-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Calathea%20orbifolia.jpg"
+                    alt="Calathea Orbifolia">
+
+                <span class="plant-tag">
+                    PET FRIENDLY
+                </span>
+
+            </div>
+
+            <div class="plant-info">
+
+                <span class="plant-type">
+                    TROPICAL
+                </span>
+
+                <h3>
+                    Calathea Orbifolia
+                </h3>
+
+                <p>
+                    Filtered light · Higher humidity
+                </p>
+
+                <a
+                    href="plant-details.html?plant=calathea"
+                    class="text-link">
+
+                    Learn about Calathea →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             POTHOS
+        ================================================== -->
+
+        <article class="plant-card"
+                 data-name="golden pothos pothos">
+
+            <div class="plant-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Epipremnum%20aureum%20%28Golden%20Pothos%29.jpg"
+                    alt="Golden Pothos">
+
+                <span class="plant-tag">
+                    BEGINNER
+                </span>
+
+            </div>
+
+            <div class="plant-info">
+
+                <span class="plant-type">
+                    TRAILING
+                </span>
+
+                <h3>
+                    Golden Pothos
+                </h3>
+
+                <p>
+                    Medium indirect light · Moderate water
+                </p>
+
+                <a
+                    href="plant-details.html?plant=pothos"
+                    class="text-link">
+
+                    Learn about Pothos →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =================================================
+             ZZ PLANT
+        ================================================== -->
+
+        <article class="plant-card"
+                 data-name="zz plant zamioculcas">
+
+            <div class="plant-image">
+
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/ZZ%20Plant%20%28Zamioculcas%20zamiifolia%29.jpg"
+                    alt="ZZ Plant">
+
+                <span class="plant-tag">
+                    LOW MAINTENANCE
+                </span>
+
+            </div>
+
+            <div class="plant-info">
+
+                <span class="plant-type">
+                    INDOOR
+                </span>
+
+                <h3>
+                    ZZ Plant
+                </h3>
+
+                <p>
+                    Low to medium light · Low water
+                </p>
+
+                <a
+                    href="plant-details.html?plant=zz"
+                    class="text-link">
+
+                    Learn about ZZ Plant →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- NO RESULT -->
+
+    <div id="noPlant"
+         class="no-plant">
+
+        <div>
+            🌿
+        </div>
+
+        <h3>
+            No plant found
+        </h3>
+
+        <p>
+            Try searching another plant name.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUIZ CTA
+===================================================== -->
+
+<section class="collection-banner">
+
+    <span class="eyebrow">
+        NEED HELP CHOOSING?
+    </span>
+
+    <h2>
+        Find the plant that
+        fits your <em>life.</em>
+    </h2>
+
+    <p>
+        Answer a few questions and discover
+        plants that match your lifestyle.
+    </p>
+
+    <a href="quiz.html"
+       class="btn btn-dark">
+
+        Take Plant Quiz →
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div>
+
+            <a href="index.html"
+               class="logo footer-logo">
+
+                <span>✦</span>
+                AURELIA GREENS
+
+            </a>
+
+            <p>
+                Plant care, education & inspiration.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="plants.html">
+                Plants
+            </a>
+
+            <a href="care.html">
+                Plant Care
+            </a>
+
+            <a href="quiz.html">
+                Plant Quiz
+            </a>
+
+            <a href="journal.html">
+                Journal
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Aurelia Greens
+        </span>
+
+        <span>
+            Learn. Grow. Thrive.
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     SEARCH JAVASCRIPT
+===================================================== -->
+
+<script>
+
+const searchInput =
+    document.getElementById("plantSearch");
+
+const plantCards =
+    document.querySelectorAll(".plant-card");
+
+const noPlant =
+    document.getElementById("noPlant");
+
+const searchMessage =
+    document.getElementById("searchMessage");
+
+
+searchInput.addEventListener(
+    "input",
+    function () {
+
+        const searchValue =
+            this.value
+            .toLowerCase()
+            .trim();
+
+
+        let found = 0;
+
+
+        plantCards.forEach(
+            function (card) {
+
+                const plantName =
+                    card.dataset.name
+                    .toLowerCase();
+
+
+                if (
+                    plantName.includes(
+                        searchValue
+                    )
+                ) {
+
+                    card.style.display =
+                        "";
+
+                    found++;
+
+                }
+
+                else {
+
+                    card.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        if (
+            searchValue === ""
+        ) {
+
+            searchMessage.innerText =
+                "Explore our plant collection";
+
+        }
+
+        else {
+
+            searchMessage.innerText =
+                found +
+                " plant" +
+                (found !== 1 ? "s" : "") +
+                " found";
+
+        }
+
+
+        if (found === 0) {
+
+            noPlant.classList.add(
+                "show"
+            );
+
+        }
+
+        else {
+
+            noPlant.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

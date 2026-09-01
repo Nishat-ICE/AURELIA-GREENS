@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Plant Details | Aurelia Greens</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html"
+           class="logo">
+
+            <span>✦</span>
+            AURELIA GREENS
+
+        </a>
+
+
+        <input type="checkbox"
+               id="menu-toggle">
+
+
+        <label for="menu-toggle"
+               class="menu-icon">
+
+            ☰
+
+        </label>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="plants.html"
+               class="active">
+
+                Plants
+
+            </a>
+
+            <a href="care.html">
+                Plant Care
+            </a>
+
+            <a href="quiz.html">
+                Plant Quiz
+            </a>
+
+            <a href="journal.html">
+                Journal
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     DETAILS
+===================================================== -->
+
+<section class="details-section section">
+
+
+    <a href="plants.html"
+       class="back-link">
+
+        ← Back to Plant Library
+
+    </a>
+
+
+    <div class="details-grid">
+
+
+        <div class="details-image">
+
+            <img id="plantImage"
+                 src=""
+                 alt="Plant">
+
+        </div>
+
+
+        <div class="details-content">
+
+            <span class="eyebrow"
+                  id="plantCategory">
+
+                PLANT
+
+            </span>
+
+
+            <h1 id="plantName">
+                Plant
+            </h1>
+
+
+            <p class="details-intro"
+               id="plantDescription">
+            </p>
+
+
+            <div class="care-stats">
+
+
+                <div>
+
+                    <span>☀</span>
+
+                    <strong>
+                        Light
+                    </strong>
+
+                    <p id="light"></p>
+
+                </div>
+
+
+                <div>
+
+                    <span>💧</span>
+
+                    <strong>
+                        Water
+                    </strong>
+
+                    <p id="water"></p>
+
+                </div>
+
+
+                <div>
+
+                    <span>🌱</span>
+
+                    <strong>
+                        Soil
+                    </strong>
+
+                    <p id="soil"></p>
+
+                </div>
+
+
+                <div>
+
+                    <span>💨</span>
+
+                    <strong>
+                        Humidity
+                    </strong>
+
+                    <p id="humidity"></p>
+
+                </div>
+
+
+                <div>
+
+                    <span>🌡</span>
+
+                    <strong>
+                        Difficulty
+                    </strong>
+
+                    <p id="difficulty"></p>
+
+                </div>
+
+
+                <div>
+
+                    <span>🐾</span>
+
+                    <strong>
+                        Pet Safety
+                    </strong>
+
+                    <p id="pets"></p>
+
+                </div>
+
+
+            </div>
+
+
+            <a href="care.html"
+               class="btn btn-dark">
+
+                Read Plant Care Guide →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CARE STORY
+===================================================== -->
+
+<section class="details-story section">
+
+    <div>
+
+        <span class="eyebrow">
+            CARE NOTES
+        </span>
+
+        <h2>
+            Help it
+            <em>thrive.</em>
+        </h2>
+
+    </div>
+
+    <p id="careText"></p>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div>
+
+            <a href="index.html"
+               class="logo footer-logo">
+
+                <span>✦</span>
+                AURELIA GREENS
+
+            </a>
+
+            <p>
+                Plant care, education & inspiration.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="plants.html">
+                Plants
+            </a>
+
+            <a href="care.html">
+                Plant Care
+            </a>
+
+            <a href="quiz.html">
+                Plant Quiz
+            </a>
+
+            <a href="journal.html">
+                Journal
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Aurelia Greens
+        </span>
+
+        <span>
+            Learn. Grow. Thrive.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   PLANT DATABASE
+===================================================== */
+
+const plants = {
+
+
+    monstera: {
+
+        name: "Monstera Deliciosa",
+
+        category: "TROPICAL · EASY CARE",
+
+        image:
+        "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=1200&q=85",
+
+        description:
+        "Monstera Deliciosa is known for its large split leaves and tropical appearance. It is a popular indoor plant for bright spaces.",
+
+        light:
+        "Bright indirect",
+
+        water:
+        "When top soil dries",
+
+        soil:
+        "Well draining",
+
+        humidity:
+        "Medium to high",
+
+        difficulty:
+        "Easy",
+
+        pets:
+        "Not pet friendly",
+
+        care:
+        "Place Monstera near bright filtered light. Allow the upper layer of soil to dry before watering. Rotate the plant occasionally and clean the leaves to remove dust."
+
+    },
+
+
+    snake: {
+
+        name: "Snake Plant",
+
+        category: "LOW LIGHT · BEGINNER",
+
+        image:
+        "https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?auto=format&fit=crop&w=1200&q=85",
+
+        description:
+        "Snake Plant is one of the most forgiving indoor plants and is an excellent choice for beginners.",
+
+        light:
+        "Low to bright",
+
+        water:
+        "Every 2–3 weeks",
+
+        soil:
+        "Very well draining",
+
+        humidity:
+        "Low to medium",
+
+        difficulty:
+        "Very easy",
+
+        pets:
+        "Not pet friendly",
+
+        care:
+        "Allow the soil to dry thoroughly between watering. Avoid overwatering and always use a pot with drainage holes."
+
+    },
+
+
+    fig: {
+
+        name: "Fiddle Leaf Fig",
+
+        category: "STATEMENT · INDOOR",
+
+        image:
+        "https://images.unsplash.com/photo-1597055181300-4a8a9f7c4e4f?auto=format&fit=crop&w=1200&q=85",
+
+        description:
+        "Fiddle Leaf Fig creates a dramatic statement with its large violin-shaped leaves.",
+
+        light:
+        "Bright indirect",
+
+        water:
+        "When soil partially dries",
+
+        soil:
+        "Rich and well draining",
+
+        humidity:
+        "Medium",
+
+        difficulty:
+        "Intermediate",
+
+        pets:
+        "Not pet friendly",
+
+        care:
+        "Give the plant plenty of bright filtered light. Keep watering consistent but avoid leaving the roots in water."
+
+    },
+
+
+    peace: {
+
+        name: "Peace Lily",
+
+        category: "FLOWERING · INDOOR",
+
+        image:
+        "https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=1200&q=85",
+
+        description:
+        "Peace Lily is appreciated for its elegant foliage and beautiful white flowers.",
+
+        light:
+        "Medium indirect",
+
+        water:
+        "When soil begins drying",
+
+        soil:
+        "Moist but draining",
+
+        humidity:
+        "Medium to high",
+
+        difficulty:
+        "Easy",
+
+        pets:
+        "Not pet friendly",
+
+        care:
+        "Keep soil lightly moist while avoiding waterlogging. Place Peace Lily away from harsh direct sunlight."
+
+    },
+
+
+    succulent: {
+
+        name: "Succulent",
+
+        category: "DESERT · LOW WATER",
+
+        image:
+        "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=1200&q=85",
+
+        description:
+        "Succulents store water in their leaves and are excellent choices for bright spaces.",
+
+        light:
+        "Bright sunlight",
+
+        water:
+        "Every 2–3 weeks",
+
+        soil:
+        "Sandy and draining",
+
+        humidity:
+        "Low",
+
+        difficulty:
+        "Easy",
+
+        pets:
+        "Depends on variety",
+
+        care:
+        "Give succulents plenty of light and allow the soil to completely dry between watering."
+
+    },
+
+
+    calathea: {
+
+        name: "Calathea Orbifolia",
+
+        category: "TROPICAL · PET FRIENDLY",
+
+        image:
+        "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=1200&q=85",
+
+        description:
+        "Calathea Orbifolia is admired for its beautiful patterned leaves and tropical appearance.",
+
+        light:
+        "Filtered indirect",
+
+        water:
+        "Keep soil lightly moist",
+
+        soil:
+        "Moisture-retaining",
+
+        humidity:
+        "High",
+
+        difficulty:
+        "Intermediate",
+
+        pets:
+        "Generally pet friendly",
+
+        care:
+        "Keep humidity relatively high and protect the plant from harsh direct sunlight. Water consistently."
+
+    },
+
+
+    pothos: {
+
+        name: "Golden Pothos",
+
+        category: "TRAILING · BEGINNER",
+
+        image:
+        "https://images.unsplash.com/photo-1614594576850-4b6e7f6f3c7a?auto=format&fit=crop&w=1200&q=85",
+
+        description:
+        "Golden Pothos is a fast-growing trailing plant with beautiful heart-shaped leaves.",
+
+        light:
+        "Medium indirect",
+
+        water:
+        "When top soil dries",
+
+        soil:
+        "Well draining",
+
+        humidity:
+        "Medium",
+
+        difficulty:
+        "Very easy",
+
+        pets:
+        "Not pet friendly",
+
+        care:
+        "Place Pothos in medium to bright indirect light. Allow the upper soil to dry before watering."
+
+    },
+
+
+    zz: {
+
+        name: "ZZ Plant",
+
+        category: "INDOOR · LOW MAINTENANCE",
+
+        image:
+        "https://images.unsplash.com/photo-1632207691143-8e1c0f2e3d5b?auto=format&fit=crop&w=1200&q=85",
+
+        description:
+        "ZZ Plant is an elegant low-maintenance indoor plant that tolerates lower light.",
+
+        light:
+        "Low to medium",
+
+        water:
+        "Every 2–3 weeks",
+
+        soil:
+        "Well draining",
+
+        humidity:
+        "Low to medium",
+
+        difficulty:
+        "Very easy",
+
+        pets:
+        "Not pet friendly",
+
+        care:
+        "Allow the soil to dry between watering. ZZ Plants store water and therefore do not need frequent watering."
+
+    }
+
+};
+
+
+/* =====================================================
+   GET PLANT FROM URL
+===================================================== */
+
+const params =
+    new URLSearchParams(
+        window.location.search
+    );
+
+
+const plantKey =
+    params.get("plant") || "monstera";
+
+
+const plant =
+    plants[plantKey] ||
+    plants.monstera;
+
+
+/* =====================================================
+   DISPLAY
+===================================================== */
+
+document.getElementById(
+    "plantName"
+).innerText =
+    plant.name;
+
+
+document.getElementById(
+    "plantCategory"
+).innerText =
+    plant.category;
+
+
+document.getElementById(
+    "plantImage"
+).src =
+    plant.image;
+
+
+document.getElementById(
+    "plantDescription"
+).innerText =
+    plant.description;
+
+
+document.getElementById(
+    "light"
+).innerText =
+    plant.light;
+
+
+document.getElementById(
+    "water"
+).innerText =
+    plant.water;
+
+
+document.getElementById(
+    "soil"
+).innerText =
+    plant.soil;
+
+
+document.getElementById(
+    "humidity"
+).innerText =
+    plant.humidity;
+
+
+document.getElementById(
+    "difficulty"
+).innerText =
+    plant.difficulty;
+
+
+document.getElementById(
+    "pets"
+).innerText =
+    plant.pets;
+
+
+document.getElementById(
+    "careText"
+).innerText =
+    plant.care;
+
+</script>
+
+
+</body>
+</html>
