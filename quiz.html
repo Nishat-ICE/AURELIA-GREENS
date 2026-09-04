@@ -17,14 +17,14 @@
           href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
-          href="https://fonts.googleapis.com"
+          href="https://fonts.gstatic.com"
           crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
           rel="stylesheet">
 
 
-    <!-- EXISTING CSS -->
+    <!-- YOUR EXISTING CSS -->
 
     <link rel="stylesheet"
           href="style.css">
@@ -32,301 +32,486 @@
 
     <!-- =================================================
          QUIZ PAGE ONLY CSS
+         This does NOT modify style.css
     ================================================== -->
 
     <style>
 
+        /* Progress */
+
         .quiz-progress-box {
+
             max-width: 650px;
+
             margin: 0 auto 55px;
+
         }
+
 
         .quiz-progress-top {
+
             display: flex;
+
             justify-content: space-between;
+
             margin-bottom: 10px;
+
             color: var(--muted);
+
             font-size: 11px;
+
             letter-spacing: 1px;
+
             text-transform: uppercase;
+
         }
+
 
         .quiz-progress {
+
             width: 100%;
+
             height: 5px;
+
             background: #dfe7e1;
+
             overflow: hidden;
+
         }
+
 
         .quiz-progress-bar {
+
             width: 0%;
+
             height: 100%;
+
             background: var(--forest);
+
             transition: width .35s ease;
+
         }
 
 
-        /* RESULT */
+        /* Better result */
 
         .quiz-result {
+
             margin-top: 80px;
+
         }
+
 
         .result-heading {
+
             text-align: center;
+
             margin-bottom: 45px;
+
         }
+
 
         .result-heading h2 {
+
             margin-top: 10px;
+
         }
+
 
         .result-heading p {
+
             max-width: 600px;
+
             margin: 12px auto;
+
             color: var(--muted);
+
             font-size: 13px;
+
         }
 
 
-        /* BEST MATCH */
+        /* Best match */
 
         .best-match {
+
             display: grid;
+
             grid-template-columns: 320px 1fr;
+
             max-width: 900px;
+
             margin: 0 auto 55px;
+
             background: #ffffff;
+
             border: 1px solid var(--line);
+
             overflow: hidden;
+
             box-shadow:
-                0 18px 45px rgba(24, 60, 43, .08);
+                0 18px 45px
+                rgba(24, 60, 43, .08);
+
         }
+
 
         .best-match-image {
+
             min-height: 360px;
-            background: #e8eee9;
+
         }
+
 
         .best-match-image img {
+
             width: 100%;
+
             height: 100%;
+
             object-fit: cover;
-            display: block;
+
         }
+
 
         .best-match-info {
+
             padding: 38px;
+
         }
+
 
         .best-label {
+
             display: inline-block;
+
             margin-bottom: 12px;
+
             color: var(--sage);
+
             font-size: 9px;
+
             font-weight: 700;
+
             letter-spacing: 2px;
+
         }
+
 
         .best-match-info h3 {
+
             margin: 0 0 8px;
+
             color: var(--forest);
+
             font-family: var(--serif);
+
             font-size: 34px;
+
         }
+
 
         .match-percentage {
+
             margin: 12px 0 20px;
+
             color: var(--forest);
+
             font-family: var(--serif);
+
             font-size: 28px;
+
         }
+
 
         .match-meter {
+
             width: 100%;
+
             height: 7px;
+
             margin-bottom: 25px;
+
             background: #e4ebe5;
+
         }
+
 
         .match-meter-fill {
+
             height: 100%;
+
             background: var(--forest);
-            transition: width .6s ease;
+
         }
+
 
         .why-match {
+
             margin: 20px 0 25px;
+
         }
+
 
         .why-match h4 {
+
             margin-bottom: 12px;
+
             color: var(--forest);
+
             font-size: 13px;
+
         }
+
 
         .why-match p {
+
             margin: 6px 0;
+
             color: var(--muted);
+
             font-size: 12px;
+
         }
 
 
-        /* PERSONALITY */
+        /* Personality */
 
         .personality-box {
+
             max-width: 900px;
+
             margin: 0 auto 60px;
+
             padding: 35px;
+
             background: var(--cream);
+
             border: 1px solid var(--line);
+
             text-align: center;
+
         }
+
 
         .personality-box h3 {
+
             margin: 8px 0;
+
             color: var(--forest);
+
             font-family: var(--serif);
+
             font-size: 30px;
+
         }
+
 
         .personality-box p {
+
             max-width: 600px;
+
             margin: 0 auto;
+
             color: var(--muted);
+
             font-size: 13px;
+
             line-height: 1.8;
+
         }
 
 
-        /* OTHER MATCHES */
+        /* Other matches */
 
         .other-matches {
+
             max-width: 900px;
+
             margin: 0 auto;
+
         }
+
 
         .other-matches-title {
+
             margin-bottom: 25px;
+
             color: var(--forest);
+
             font-family: var(--serif);
+
             font-size: 28px;
+
         }
+
 
         .other-match-card {
+
             display: grid;
+
             grid-template-columns: 100px 1fr auto;
+
             align-items: center;
+
             gap: 20px;
+
             margin-bottom: 14px;
+
             padding: 15px;
+
             background: rgba(255,255,255,.6);
+
             border: 1px solid var(--line);
+
         }
+
 
         .other-match-card img {
+
             width: 100px;
+
             height: 80px;
+
             object-fit: cover;
-            display: block;
-            background: #e8eee9;
+
         }
+
 
         .other-match-card h4 {
+
             margin: 0 0 5px;
+
             color: var(--forest);
+
             font-family: var(--serif);
+
             font-size: 21px;
+
         }
+
 
         .other-match-card p {
-            margin: 0 0 8px;
+
+            margin: 0;
+
             color: var(--muted);
+
             font-size: 11px;
+
         }
+
 
         .other-score {
+
             color: var(--forest);
+
             font-family: var(--serif);
+
             font-size: 20px;
+
             text-align: right;
+
         }
+
 
         .other-score small {
+
             display: block;
+
             color: var(--muted);
+
             font-family: var(--sans);
+
             font-size: 9px;
+
         }
 
-        .mini-meter {
-            width: 120px;
-            height: 4px;
-            margin-top: 6px;
-            background: #e4ebe5;
-        }
-
-        .mini-meter-fill {
-            height: 100%;
-            background: var(--forest);
-        }
-
-
-        /* ACTION */
 
         .result-actions {
+
             display: flex;
+
             justify-content: center;
+
             margin-top: 35px;
+
         }
+
 
         .quiz-reset {
+
             border: none;
+
             border-bottom: 1px solid var(--forest);
+
             background: transparent;
+
             padding: 8px 0;
+
             color: var(--forest);
+
             cursor: pointer;
+
             font-size: 12px;
+
         }
 
 
-        /* MOBILE */
+        /* Mobile */
 
         @media(max-width: 700px) {
 
             .best-match {
+
                 grid-template-columns: 1fr;
+
             }
+
 
             .best-match-image {
-                min-height: 260px;
+
+                min-height: 250px;
+
             }
+
 
             .best-match-info {
+
                 padding: 25px;
+
             }
+
 
             .best-match-info h3 {
+
                 font-size: 28px;
+
             }
+
 
             .other-match-card {
+
                 grid-template-columns: 75px 1fr;
+
             }
+
 
             .other-match-card img {
+
                 width: 75px;
+
                 height: 70px;
+
             }
+
 
             .other-score {
-                grid-column: 2;
-                text-align: left;
-            }
 
-            .mini-meter {
-                width: 100px;
+                grid-column: 2;
+
+                text-align: left;
+
             }
 
         }
@@ -346,6 +531,7 @@
 <header class="navbar">
 
     <div class="nav-container">
+
 
         <a href="index.html"
            class="logo">
@@ -467,6 +653,7 @@
 
             <div id="progressBar"
                  class="quiz-progress-bar">
+
             </div>
 
         </div>
@@ -478,633 +665,681 @@
 <form id="plantQuiz">
 
 
-    <!-- QUESTION 01 -->
+<!-- =====================================================
+     QUESTION 01
+===================================================== -->
 
-    <div class="quiz-question">
+<div class="quiz-question">
 
-        <span class="quiz-number">
-            01
-        </span>
-
-        <h2>
-            How much natural light does your space get?
-        </h2>
-
-        <div class="option-grid">
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="light"
-                    value="low"
-                    required>
-
-                <span>
-
-                    🌥 Low Light
-
-                    <small>
-                        Away from windows
-                    </small>
-
-                </span>
-
-            </label>
+    <span class="quiz-number">
+        01
+    </span>
 
 
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="light"
-                    value="medium">
-
-                <span>
-
-                    ☀ Medium Light
-
-                    <small>
-                        Filtered sunlight
-                    </small>
-
-                </span>
-
-            </label>
+    <h2>
+        How much natural light does your space get?
+    </h2>
 
 
-            <label class="option">
+    <div class="option-grid">
 
-                <input
-                    type="radio"
-                    name="light"
-                    value="bright">
 
-                <span>
+        <label class="option">
 
-                    🌞 Bright Light
+            <input
+                type="radio"
+                name="light"
+                value="low"
+                required>
 
-                    <small>
-                        Plenty of sunlight
-                    </small>
+            <span>
 
-                </span>
+                🌥 Low Light
 
-            </label>
+                <small>
+                    Away from windows
+                </small>
 
-        </div>
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="light"
+                value="medium">
+
+            <span>
+
+                ☀ Medium Light
+
+                <small>
+                    Filtered sunlight
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="light"
+                value="bright">
+
+            <span>
+
+                🌞 Bright Light
+
+                <small>
+                    Plenty of sunlight
+                </small>
+
+            </span>
+
+        </label>
+
 
     </div>
 
+</div>
 
 
-    <!-- QUESTION 02 -->
 
-    <div class="quiz-question">
+<!-- =====================================================
+     QUESTION 02
+===================================================== -->
 
-        <span class="quiz-number">
-            02
-        </span>
+<div class="quiz-question">
 
-        <h2>
-            How often can you water your plant?
-        </h2>
-
-        <div class="option-grid">
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="water"
-                    value="low"
-                    required>
-
-                <span>
-
-                    😴 Rarely
-
-                    <small>
-                        I may forget
-                    </small>
-
-                </span>
-
-            </label>
+    <span class="quiz-number">
+        02
+    </span>
 
 
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="water"
-                    value="medium">
-
-                <span>
-
-                    🌿 Weekly
-
-                    <small>
-                        Regular watering
-                    </small>
-
-                </span>
-
-            </label>
+    <h2>
+        How often can you water your plant?
+    </h2>
 
 
-            <label class="option">
+    <div class="option-grid">
 
-                <input
-                    type="radio"
-                    name="water"
-                    value="high">
 
-                <span>
+        <label class="option">
 
-                    💚 Often
+            <input
+                type="radio"
+                name="water"
+                value="low"
+                required>
 
-                    <small>
-                        I enjoy plant care
-                    </small>
+            <span>
 
-                </span>
+                😴 Rarely
 
-            </label>
+                <small>
+                    I may forget
+                </small>
 
-        </div>
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="water"
+                value="medium">
+
+            <span>
+
+                🌿 Weekly
+
+                <small>
+                    Regular watering
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="water"
+                value="high">
+
+            <span>
+
+                💚 Often
+
+                <small>
+                    I enjoy plant care
+                </small>
+
+            </span>
+
+        </label>
+
 
     </div>
 
+</div>
 
 
-    <!-- QUESTION 03 -->
 
-    <div class="quiz-question">
+<!-- =====================================================
+     QUESTION 03
+===================================================== -->
 
-        <span class="quiz-number">
-            03
-        </span>
+<div class="quiz-question">
 
-        <h2>
-            How experienced are you with plants?
-        </h2>
-
-        <div class="option-grid">
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="experience"
-                    value="beginner"
-                    required>
-
-                <span>
-
-                    🌱 Beginner
-
-                    <small>
-                        My first plant
-                    </small>
-
-                </span>
-
-            </label>
+    <span class="quiz-number">
+        03
+    </span>
 
 
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="experience"
-                    value="some">
-
-                <span>
-
-                    🌿 Some Experience
-
-                    <small>
-                        I know the basics
-                    </small>
-
-                </span>
-
-            </label>
+    <h2>
+        How experienced are you with plants?
+    </h2>
 
 
-            <label class="option">
+    <div class="option-grid">
 
-                <input
-                    type="radio"
-                    name="experience"
-                    value="expert">
 
-                <span>
+        <label class="option">
 
-                    🌳 Experienced
+            <input
+                type="radio"
+                name="experience"
+                value="beginner"
+                required>
 
-                    <small>
-                        I love gardening
-                    </small>
+            <span>
 
-                </span>
+                🌱 Beginner
 
-            </label>
+                <small>
+                    My first plant
+                </small>
 
-        </div>
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="experience"
+                value="some">
+
+            <span>
+
+                🌿 Some Experience
+
+                <small>
+                    I know the basics
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="experience"
+                value="expert">
+
+            <span>
+
+                🌳 Experienced
+
+                <small>
+                    I love gardening
+                </small>
+
+            </span>
+
+        </label>
+
 
     </div>
 
+</div>
 
 
-    <!-- QUESTION 04 -->
 
-    <div class="quiz-question">
+<!-- =====================================================
+     QUESTION 04
+===================================================== -->
 
-        <span class="quiz-number">
-            04
-        </span>
+<div class="quiz-question">
 
-        <h2>
-            What type of plant do you prefer?
-        </h2>
-
-        <div class="option-grid">
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="style"
-                    value="foliage"
-                    required>
-
-                <span>
-
-                    🌿 Foliage
-
-                    <small>
-                        Beautiful leaves
-                    </small>
-
-                </span>
-
-            </label>
+    <span class="quiz-number">
+        04
+    </span>
 
 
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="style"
-                    value="flower">
-
-                <span>
-
-                    🌸 Flowering
-
-                    <small>
-                        I love flowers
-                    </small>
-
-                </span>
-
-            </label>
+    <h2>
+        What type of plant do you prefer?
+    </h2>
 
 
-            <label class="option">
+    <div class="option-grid">
 
-                <input
-                    type="radio"
-                    name="style"
-                    value="statement">
 
-                <span>
+        <label class="option">
 
-                    🌳 Statement
+            <input
+                type="radio"
+                name="style"
+                value="foliage"
+                required>
 
-                    <small>
-                        Something dramatic
-                    </small>
+            <span>
 
-                </span>
+                🌿 Foliage
 
-            </label>
+                <small>
+                    Beautiful leaves
+                </small>
 
-        </div>
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="style"
+                value="flower">
+
+            <span>
+
+                🌸 Flowering
+
+                <small>
+                    I love flowers
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="style"
+                value="statement">
+
+            <span>
+
+                🌳 Statement
+
+                <small>
+                    Something dramatic
+                </small>
+
+            </span>
+
+        </label>
+
 
     </div>
 
+</div>
 
 
-    <!-- QUESTION 05 -->
 
-    <div class="quiz-question">
+<!-- =====================================================
+     QUESTION 05
+===================================================== -->
 
-        <span class="quiz-number">
-            05
-        </span>
+<div class="quiz-question">
 
-        <h2>
-            How much space do you have?
-        </h2>
-
-        <div class="option-grid">
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="space"
-                    value="small"
-                    required>
-
-                <span>
-
-                    🪴 Small
-
-                    <small>
-                        Desk or shelf
-                    </small>
-
-                </span>
-
-            </label>
+    <span class="quiz-number">
+        05
+    </span>
 
 
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="space"
-                    value="medium">
-
-                <span>
-
-                    🏠 Medium
-
-                    <small>
-                        Corner or table
-                    </small>
-
-                </span>
-
-            </label>
+    <h2>
+        How much space do you have?
+    </h2>
 
 
-            <label class="option">
+    <div class="option-grid">
 
-                <input
-                    type="radio"
-                    name="space"
-                    value="large">
 
-                <span>
+        <label class="option">
 
-                    🌳 Large
+            <input
+                type="radio"
+                name="space"
+                value="small"
+                required>
 
-                    <small>
-                        Floor space
-                    </small>
+            <span>
 
-                </span>
+                🪴 Small
 
-            </label>
+                <small>
+                    Desk or shelf
+                </small>
 
-        </div>
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="space"
+                value="medium">
+
+            <span>
+
+                🏠 Medium
+
+                <small>
+                    Corner or table
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="space"
+                value="large">
+
+            <span>
+
+                🌳 Large
+
+                <small>
+                    Floor space
+                </small>
+
+            </span>
+
+        </label>
+
 
     </div>
 
+</div>
 
 
-    <!-- QUESTION 06 -->
 
-    <div class="quiz-question">
+<!-- =====================================================
+     QUESTION 06
+===================================================== -->
 
-        <span class="quiz-number">
-            06
-        </span>
+<div class="quiz-question">
 
-        <h2>
-            What is your room's humidity like?
-        </h2>
-
-        <div class="option-grid">
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="humidity"
-                    value="low"
-                    required>
-
-                <span>
-
-                    🏜 Dry
-
-                    <small>
-                        Dry indoor air
-                    </small>
-
-                </span>
-
-            </label>
+    <span class="quiz-number">
+        06
+    </span>
 
 
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="humidity"
-                    value="medium">
-
-                <span>
-
-                    🌿 Normal
-
-                    <small>
-                        Typical room
-                    </small>
-
-                </span>
-
-            </label>
+    <h2>
+        What is your room's humidity like?
+    </h2>
 
 
-            <label class="option">
+    <div class="option-grid">
 
-                <input
-                    type="radio"
-                    name="humidity"
-                    value="high">
 
-                <span>
+        <label class="option">
 
-                    🌴 Humid
+            <input
+                type="radio"
+                name="humidity"
+                value="low"
+                required>
 
-                    <small>
-                        Moist environment
-                    </small>
+            <span>
 
-                </span>
+                🏜 Dry
 
-            </label>
+                <small>
+                    Dry indoor air
+                </small>
 
-        </div>
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="humidity"
+                value="medium">
+
+            <span>
+
+                🌿 Normal
+
+                <small>
+                    Typical room
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="humidity"
+                value="high">
+
+            <span>
+
+                🌴 Humid
+
+                <small>
+                    Moist environment
+                </small>
+
+            </span>
+
+        </label>
+
 
     </div>
 
+</div>
 
 
-    <!-- QUESTION 07 -->
 
-    <div class="quiz-question">
+<!-- =====================================================
+     QUESTION 07
+===================================================== -->
 
-        <span class="quiz-number">
-            07
-        </span>
+<div class="quiz-question">
 
-        <h2>
-            Do you have pets at home?
-        </h2>
-
-        <div class="option-grid">
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="pets"
-                    value="yes"
-                    required>
-
-                <span>
-
-                    🐶 Yes
-
-                    <small>
-                        Pet safety matters
-                    </small>
-
-                </span>
-
-            </label>
+    <span class="quiz-number">
+        07
+    </span>
 
 
-            <label class="option">
+    <h2>
+        Do you have pets at home?
+    </h2>
 
-                <input
-                    type="radio"
-                    name="pets"
-                    value="no">
 
-                <span>
+    <div class="option-grid">
 
-                    🌱 No
 
-                    <small>
-                        No pets
-                    </small>
+        <label class="option">
 
-                </span>
+            <input
+                type="radio"
+                name="pets"
+                value="yes"
+                required>
 
-            </label>
+            <span>
 
-        </div>
+                🐶 Yes
+
+                <small>
+                    Pet safety matters
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="pets"
+                value="no">
+
+            <span>
+
+                🌱 No
+
+                <small>
+                    No pets
+                </small>
+
+            </span>
+
+        </label>
+
 
     </div>
 
+</div>
 
 
-    <!-- QUESTION 08 -->
 
-    <div class="quiz-question">
+<!-- =====================================================
+     QUESTION 08
+===================================================== -->
 
-        <span class="quiz-number">
-            08
-        </span>
+<div class="quiz-question">
 
-        <h2>
-            How much maintenance do you prefer?
-        </h2>
-
-        <div class="option-grid">
-
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="maintenance"
-                    value="low"
-                    required>
-
-                <span>
-
-                    😌 Low
-
-                    <small>
-                        Minimal care
-                    </small>
-
-                </span>
-
-            </label>
+    <span class="quiz-number">
+        08
+    </span>
 
 
-            <label class="option">
-
-                <input
-                    type="radio"
-                    name="maintenance"
-                    value="medium">
-
-                <span>
-
-                    🌿 Moderate
-
-                    <small>
-                        Regular care
-                    </small>
-
-                </span>
-
-            </label>
+    <h2>
+        How much maintenance do you prefer?
+    </h2>
 
 
-            <label class="option">
+    <div class="option-grid">
 
-                <input
-                    type="radio"
-                    name="maintenance"
-                    value="high">
 
-                <span>
+        <label class="option">
 
-                    💚 High
+            <input
+                type="radio"
+                name="maintenance"
+                value="low"
+                required>
 
-                    <small>
-                        I enjoy plant care
-                    </small>
+            <span>
 
-                </span>
+                😌 Low
 
-            </label>
+                <small>
+                    Minimal care
+                </small>
 
-        </div>
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="maintenance"
+                value="medium">
+
+            <span>
+
+                🌿 Moderate
+
+                <small>
+                    Regular care
+                </small>
+
+            </span>
+
+        </label>
+
+
+        <label class="option">
+
+            <input
+                type="radio"
+                name="maintenance"
+                value="high">
+
+            <span>
+
+                💚 High
+
+                <small>
+                    I enjoy plant care
+                </small>
+
+            </span>
+
+        </label>
+
 
     </div>
 
+</div>
 
 
-    <button
-        type="submit"
-        class="btn btn-dark quiz-button">
 
-        Find My Plant Matches →
+<button
+    type="submit"
+    class="btn btn-dark quiz-button">
 
-    </button>
+    Find My Plant Matches →
+
+</button>
 
 
 </form>
@@ -1117,6 +1352,7 @@
 
 <div id="quizResult"
      class="quiz-result">
+
 </div>
 
 
@@ -1132,6 +1368,7 @@
 
     <div class="footer-main">
 
+
         <div>
 
             <a href="index.html"
@@ -1142,6 +1379,7 @@
                 AURELIA GREENS
 
             </a>
+
 
             <p>
                 Plant care, education & inspiration.
@@ -1174,6 +1412,7 @@
 
         </div>
 
+
     </div>
 
 
@@ -1193,49 +1432,26 @@
 
 
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-
 /* =====================================================
-   IMAGE FALLBACK
+   LOCAL PLANTS
+   These remain as fallback and preserve the existing
+   Aurelia Greens plant-details pages.
 ===================================================== */
 
-const fallbackImage =
-"https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85";
-
-
-function imageError(image) {
-
-    image.onerror = null;
-
-    image.src = fallbackImage;
-
-}
-
-
-
-/* =====================================================
-   PLANT DATABASE
-===================================================== */
-
-const plants = {
-
+const localPlants = {
 
     monstera: {
-
         name: "Monstera Deliciosa",
-
-        image:
-        "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=900&q=85",
-
-        description:
-        "A beautiful tropical plant with large decorative leaves.",
-
-        link:
-        "plant-details.html?plant=monstera",
-
+        image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=900&q=85",
+        description: "A beautiful tropical plant with large decorative leaves.",
+        link: "plant-details.html?plant=monstera",
         profile: {
-
             light: ["medium", "bright"],
             water: ["medium", "high"],
             experience: ["beginner", "some"],
@@ -1244,27 +1460,15 @@ const plants = {
             humidity: ["medium", "high"],
             pets: ["no"],
             maintenance: ["medium", "high"]
-
         }
-
     },
 
-
     snake: {
-
         name: "Snake Plant",
-
-        image:
-        "https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?auto=format&fit=crop&w=900&q=85",
-
-        description:
-        "A hardy indoor plant that is excellent for beginners.",
-
-        link:
-        "plant-details.html?plant=snake",
-
+        image: "https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?auto=format&fit=crop&w=900&q=85",
+        description: "A hardy indoor plant that is excellent for beginners.",
+        link: "plant-details.html?plant=snake",
         profile: {
-
             light: ["low", "medium"],
             water: ["low"],
             experience: ["beginner", "some"],
@@ -1273,27 +1477,15 @@ const plants = {
             humidity: ["low", "medium"],
             pets: ["no"],
             maintenance: ["low"]
-
         }
-
     },
 
-
     fig: {
-
         name: "Fiddle Leaf Fig",
-
-        image:
-        "https://images.unsplash.com/photo-1597055181300-4a8a9f7c4e4f?auto=format&fit=crop&w=900&q=85",
-
-        description:
-        "A dramatic statement plant that loves bright spaces.",
-
-        link:
-        "plant-details.html?plant=fig",
-
+        image: "https://images.unsplash.com/photo-1597055181300-4a8a9f7c4e4f?auto=format&fit=crop&w=900&q=85",
+        description: "A dramatic statement plant that loves bright spaces.",
+        link: "plant-details.html?plant=fig",
         profile: {
-
             light: ["bright"],
             water: ["medium", "high"],
             experience: ["some", "expert"],
@@ -1302,27 +1494,15 @@ const plants = {
             humidity: ["medium", "high"],
             pets: ["no"],
             maintenance: ["medium", "high"]
-
         }
-
     },
 
-
     peace: {
-
         name: "Peace Lily",
-
-        image:
-        "https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=900&q=85",
-
-        description:
-        "An elegant flowering plant that enjoys regular moisture.",
-
-        link:
-        "plant-details.html?plant=peace",
-
+        image: "https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=900&q=85",
+        description: "An elegant flowering plant that enjoys regular moisture.",
+        link: "plant-details.html?plant=peace",
         profile: {
-
             light: ["medium"],
             water: ["medium", "high"],
             experience: ["beginner", "some"],
@@ -1331,27 +1511,15 @@ const plants = {
             humidity: ["medium", "high"],
             pets: ["no"],
             maintenance: ["medium", "high"]
-
         }
-
     },
 
-
     succulent: {
-
         name: "Succulent",
-
-        image:
-        "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=900&q=85",
-
-        description:
-        "A low-water plant that loves bright sunny spaces.",
-
-        link:
-        "plant-details.html?plant=succulent",
-
+        image: "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=900&q=85",
+        description: "A low-water plant that loves bright sunny spaces.",
+        link: "plant-details.html?plant=succulent",
         profile: {
-
             light: ["bright"],
             water: ["low"],
             experience: ["beginner", "some"],
@@ -1360,27 +1528,15 @@ const plants = {
             humidity: ["low"],
             pets: ["yes", "no"],
             maintenance: ["low"]
-
         }
-
     },
 
-
     calathea: {
-
         name: "Calathea Orbifolia",
-
-        image:
-        "https://images.unsplash.com/photo-1616762101767-5a1d3a1c2f1c?auto=format&fit=crop&w=900&q=85",
-
-        description:
-        "A beautiful tropical plant that prefers humid environments.",
-
-        link:
-        "plant-details.html?plant=calathea",
-
+        image: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=900&q=85",
+        description: "A beautiful tropical plant that prefers humid environments.",
+        link: "plant-details.html?plant=calathea",
         profile: {
-
             light: ["medium"],
             water: ["medium", "high"],
             experience: ["some", "expert"],
@@ -1389,27 +1545,15 @@ const plants = {
             humidity: ["high"],
             pets: ["yes"],
             maintenance: ["high"]
-
         }
-
     },
 
-
     pothos: {
-
         name: "Golden Pothos",
-
-        image:
-        "https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=900&q=85",
-
-        description:
-        "A versatile trailing plant that is easy to grow indoors.",
-
-        link:
-        "plant-details.html?plant=pothos",
-
+        image: "https://images.unsplash.com/photo-1614594576850-4b6e7f6f3c7a?auto=format&fit=crop&w=900&q=85",
+        description: "A versatile trailing plant that is easy to grow indoors.",
+        link: "plant-details.html?plant=pothos",
         profile: {
-
             light: ["low", "medium"],
             water: ["medium"],
             experience: ["beginner", "some"],
@@ -1418,27 +1562,15 @@ const plants = {
             humidity: ["medium", "high"],
             pets: ["no"],
             maintenance: ["low", "medium"]
-
         }
-
     },
 
-
     zz: {
-
         name: "ZZ Plant",
-
-        image:
-        "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=85",
-
-        description:
-        "An elegant low-maintenance plant for busy lifestyles.",
-
-        link:
-        "plant-details.html?plant=zz",
-
+        image: "https://images.unsplash.com/photo-1632207691143-8e1c0f2e3d5b?auto=format&fit=crop&w=900&q=85",
+        description: "An elegant low-maintenance plant for busy lifestyles.",
+        link: "plant-details.html?plant=zz",
         profile: {
-
             light: ["low", "medium"],
             water: ["low"],
             experience: ["beginner", "some"],
@@ -1447,13 +1579,9 @@ const plants = {
             humidity: ["low", "medium"],
             pets: ["no"],
             maintenance: ["low"]
-
         }
-
     }
-
 };
-
 
 
 /* =====================================================
@@ -1461,7 +1589,6 @@ const plants = {
 ===================================================== */
 
 const weights = {
-
     light: 25,
     water: 20,
     experience: 10,
@@ -1470,64 +1597,44 @@ const weights = {
     humidity: 10,
     pets: 5,
     maintenance: 5
-
 };
 
 
+/* =====================================================
+   API SETTINGS
+===================================================== */
+
+const API_BASE = "https://aurelia-greens.vercel.app/api/search";
+let apiPlantsCache = null;
+
 
 /* =====================================================
-   ANSWER
+   ANSWER FUNCTION
 ===================================================== */
 
 function getAnswer(name) {
+    const selected = document.querySelector(
+        'input[name="' + name + '"]:checked'
+    );
 
-    const selected =
-        document.querySelector(
-            'input[name="' +
-            name +
-            '"]:checked'
-        );
-
-    return selected
-        ? selected.value
-        : null;
-
+    return selected ? selected.value : null;
 }
-
 
 
 /* =====================================================
    PROGRESS
 ===================================================== */
 
-const quizInputs =
-    document.querySelectorAll(
-        '#plantQuiz input[type="radio"]'
-    );
+const quizInputs = document.querySelectorAll(
+    '#plantQuiz input[type="radio"]'
+);
 
-
-const progressBar =
-    document.getElementById(
-        "progressBar"
-    );
-
-
-const progressPercent =
-    document.getElementById(
-        "progressPercent"
-    );
-
-
-const questionCounter =
-    document.getElementById(
-        "questionCounter"
-    );
-
+const progressBar = document.getElementById("progressBar");
+const progressPercent = document.getElementById("progressPercent");
+const questionCounter = document.getElementById("questionCounter");
 
 function updateProgress() {
-
     const categories = [
-
         "light",
         "water",
         "experience",
@@ -1536,76 +1643,629 @@ function updateProgress() {
         "humidity",
         "pets",
         "maintenance"
-
     ];
-
 
     let answered = 0;
 
-
-    categories.forEach(
-        function(category) {
-
-            if (
-                document.querySelector(
-                    'input[name="' +
-                    category +
-                    '"]:checked'
-                )
-            ) {
-
-                answered++;
-
-            }
-
+    categories.forEach(function(category) {
+        if (document.querySelector(
+            'input[name="' + category + '"]:checked'
+        )) {
+            answered++;
         }
-    );
+    });
 
+    const percent = Math.round((answered / 8) * 100);
 
-    const percent =
-        Math.round(
-            (answered / 8) * 100
-        );
-
-
-    progressBar.style.width =
-        percent + "%";
-
-
-    progressPercent.innerText =
-        percent + "%";
-
+    progressBar.style.width = percent + "%";
+    progressPercent.innerText = percent + "%";
 
     if (answered < 8) {
-
         questionCounter.innerText =
-            "Question " +
-            (answered + 1) +
-            " of 8";
+            "Question " + (answered + 1) + " of 8";
+    } else {
+        questionCounter.innerText = "All questions answered";
+    }
+}
 
+quizInputs.forEach(function(input) {
+    input.addEventListener("change", updateProgress);
+});
+
+
+/* =====================================================
+   HELPERS FOR PERENUAL DATA
+===================================================== */
+
+function firstValue(value) {
+    if (Array.isArray(value)) return value[0] || "";
+    return value || "";
+}
+
+function textOf(value) {
+    if (Array.isArray(value)) return value.join(" ").toLowerCase();
+    return String(value || "").toLowerCase();
+}
+
+function getApiName(plant) {
+    return plant.common_name ||
+        firstValue(plant.scientific_name) ||
+        "Unknown Plant";
+}
+
+function getApiScientificName(plant) {
+    return firstValue(plant.scientific_name);
+}
+
+function getApiImage(plant) {
+    if (plant.default_image) {
+        return plant.default_image.regular_url ||
+            plant.default_image.medium_url ||
+            plant.default_image.small_url ||
+            "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85";
     }
 
-    else {
+    return "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85";
+}
 
-        questionCounter.innerText =
-            "All questions answered";
+function getApiLink(plant) {
+    if (!plant.id) return "#";
 
+    return "https://www.perenual.com/plant-species-database-search-finder/species/" +
+        encodeURIComponent(plant.id);
+}
+
+function getApiDescription(plant) {
+    const name = getApiName(plant);
+    const scientific = getApiScientificName(plant);
+    const watering = plant.watering || "regular care";
+
+    return scientific
+        ? name + " (" + scientific + ") is a plant with " +
+          String(watering).toLowerCase() + " watering needs."
+        : name + " is a plant with " +
+          String(watering).toLowerCase() + " watering needs.";
+}
+
+function mapLight(plant) {
+    const text = textOf(plant.sunlight);
+
+    if (text.includes("low") || text.includes("shade")) {
+        return ["low", "medium"];
     }
 
+    if (text.includes("bright indirect") || text.includes("indirect")) {
+        return ["medium", "bright"];
+    }
+
+    if (text.includes("full sun") || text.includes("direct") || text.includes("sun")) {
+        return ["bright"];
+    }
+
+    return ["medium", "bright"];
+}
+
+function mapWater(plant) {
+    const text = textOf(plant.watering);
+
+    if (text.includes("minimum") || text.includes("rare") || text.includes("none") || text.includes("low")) {
+        return ["low"];
+    }
+
+    if (text.includes("frequent") || text.includes("daily") || text.includes("high")) {
+        return ["high"];
+    }
+
+    return ["medium", "high"];
+}
+
+function mapExperience(plant) {
+    const text = textOf(plant.care_level || plant.maintenance);
+
+    if (text.includes("easy") || text.includes("low")) {
+        return ["beginner", "some"];
+    }
+
+    if (text.includes("difficult") || text.includes("high") || text.includes("expert")) {
+        return ["some", "expert"];
+    }
+
+    return ["beginner", "some"];
+}
+
+function mapStyle(plant) {
+    const text = (
+        getApiName(plant) + " " +
+        textOf(plant.type) + " " +
+        textOf(plant.description) + " " +
+        textOf(plant.other_name)
+    );
+
+    if (
+        text.includes("flower") ||
+        text.includes("bloom") ||
+        text.includes("orchid") ||
+        text.includes("lily") ||
+        text.includes("rose")
+    ) {
+        return ["flower"];
+    }
+
+    if (
+        text.includes("tree") ||
+        text.includes("palm") ||
+        text.includes("large") ||
+        text.includes("statement")
+    ) {
+        return ["statement", "foliage"];
+    }
+
+    return ["foliage"];
+}
+
+function mapSpace(plant) {
+    const text = textOf(plant.dimension || plant.size);
+
+    if (
+        text.includes("large") ||
+        text.includes("10 ft") ||
+        text.includes("8 ft") ||
+        text.includes("6 ft") ||
+        text.includes("5 ft")
+    ) {
+        return ["large"];
+    }
+
+    if (
+        text.includes("small") ||
+        text.includes("1 ft") ||
+        text.includes("2 ft")
+    ) {
+        return ["small", "medium"];
+    }
+
+    return ["medium", "large"];
+}
+
+function mapHumidity(plant) {
+    const text = (
+        getApiName(plant) + " " +
+        textOf(plant.description) + " " +
+        textOf(plant.other_name) + " " +
+        textOf(plant.watering)
+    );
+
+    if (
+        text.includes("tropical") ||
+        text.includes("humid") ||
+        text.includes("moist")
+    ) {
+        return ["medium", "high"];
+    }
+
+    if (
+        text.includes("dry") ||
+        text.includes("drought") ||
+        text.includes("succulent") ||
+        text.includes("cactus")
+    ) {
+        return ["low"];
+    }
+
+    return ["medium"];
+}
+
+function mapPets(plant) {
+    const value = plant.poisonous_to_pets;
+
+    if (value === 0 || value === "0" || value === false) {
+        return ["yes"];
+    }
+
+    if (value === 1 || value === "1" || value === true) {
+        return ["no"];
+    }
+
+    return ["yes", "no"];
+}
+
+function mapMaintenance(plant) {
+    const text = textOf(plant.maintenance || plant.care_level);
+
+    if (text.includes("low") || text.includes("easy")) {
+        return ["low"];
+    }
+
+    if (text.includes("high") || text.includes("difficult")) {
+        return ["high"];
+    }
+
+    return ["medium"];
+}
+
+function convertApiPlant(plant) {
+    return {
+        id: plant.id,
+        name: getApiName(plant),
+        image: getApiImage(plant),
+        description: getApiDescription(plant),
+        link: getApiLink(plant),
+        profile: {
+            light: mapLight(plant),
+            water: mapWater(plant),
+            experience: mapExperience(plant),
+            style: mapStyle(plant),
+            space: mapSpace(plant),
+            humidity: mapHumidity(plant),
+            pets: mapPets(plant),
+            maintenance: mapMaintenance(plant)
+        }
+    };
 }
 
 
-quizInputs.forEach(
-    function(input) {
+/* =====================================================
+   LOAD API PLANTS
+   Cached in sessionStorage so repeated quiz attempts
+   do not make unnecessary API requests.
+===================================================== */
 
-        input.addEventListener(
-            "change",
-            updateProgress
-        );
+async function loadQuizPlants() {
+    if (apiPlantsCache) return apiPlantsCache;
 
+    const saved = sessionStorage.getItem("aureliaQuizPlants");
+
+    if (saved) {
+        try {
+            apiPlantsCache = JSON.parse(saved);
+            if (Array.isArray(apiPlantsCache) && apiPlantsCache.length) {
+                return apiPlantsCache;
+            }
+        } catch (error) {
+            sessionStorage.removeItem("aureliaQuizPlants");
+        }
     }
-);
 
+    const urls = [
+        API_BASE + "?page=1&indoor=1",
+        API_BASE + "?page=2&indoor=1"
+    ];
+
+    const responses = await Promise.all(
+        urls.map(function(url) {
+            return fetch(url, { cache: "no-store" });
+        })
+    );
+
+    for (const response of responses) {
+        if (!response.ok) {
+            throw new Error("Plant API request failed: " + response.status);
+        }
+    }
+
+    const payloads = await Promise.all(
+        responses.map(function(response) {
+            return response.json();
+        })
+    );
+
+    const rawPlants = [];
+    const seenIds = new Set();
+
+    payloads.forEach(function(payload) {
+        if (!Array.isArray(payload.data)) return;
+
+        payload.data.forEach(function(plant) {
+            if (!plant || !plant.id || seenIds.has(plant.id)) return;
+
+            seenIds.add(plant.id);
+            rawPlants.push(plant);
+        });
+    });
+
+    apiPlantsCache = rawPlants.map(convertApiPlant);
+
+    if (apiPlantsCache.length) {
+        sessionStorage.setItem(
+            "aureliaQuizPlants",
+            JSON.stringify(apiPlantsCache)
+        );
+    }
+
+    return apiPlantsCache;
+}
+
+
+/* =====================================================
+   CALCULATE MATCHES
+===================================================== */
+
+function calculateResults(plantList, answers) {
+    return plantList
+        .map(function(plant) {
+            let score = 0;
+            let reasons = [];
+
+            Object.keys(weights).forEach(function(category) {
+                const selectedAnswer = answers[category];
+                const profileValues = plant.profile[category] || [];
+
+                if (
+                    selectedAnswer &&
+                    profileValues.includes(selectedAnswer)
+                ) {
+                    score += weights[category];
+
+                    const reasonText = {
+                        light: "Your lighting preference fits this plant.",
+                        water: "Your watering routine suits its needs.",
+                        experience: "Its care level fits your experience.",
+                        style: "Its appearance matches your plant preference.",
+                        space: "Its size fits your available space.",
+                        humidity: "Your room humidity is suitable.",
+                        pets: "Its pet suitability matches your home.",
+                        maintenance: "Its maintenance level fits your lifestyle."
+                    };
+
+                    reasons.push(reasonText[category]);
+                }
+            });
+
+            return {
+                plant: plant,
+                score: score,
+                reasons: reasons
+            };
+        })
+        .sort(function(a, b) {
+            return b.score - a.score;
+        });
+}
+
+
+/* =====================================================
+   PERSONALITY
+===================================================== */
+
+function getPersonality(answers) {
+    if (
+        answers.maintenance === "low" &&
+        answers.water === "low"
+    ) {
+        return {
+            title: "The Easygoing Plant Parent",
+            text: "You prefer plants that can fit naturally into a busy lifestyle without demanding constant attention."
+        };
+    }
+
+    if (
+        answers.experience === "expert" ||
+        answers.maintenance === "high"
+    ) {
+        return {
+            title: "The Dedicated Plant Parent",
+            text: "You enjoy caring for plants and are comfortable giving them the extra attention they need to thrive."
+        };
+    }
+
+    if (answers.style === "flower") {
+        return {
+            title: "The Bloom Lover",
+            text: "You are drawn to plants that bring color, softness and beautiful natural details into your space."
+        };
+    }
+
+    if (answers.style === "statement") {
+        return {
+            title: "The Green Statement Maker",
+            text: "You love plants that become a visual centerpiece and transform the personality of a room."
+        };
+    }
+
+    return {
+        title: "The Balanced Plant Parent",
+        text: "You like a healthy balance between beautiful plants and manageable everyday care."
+    };
+}
+
+
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHTML(value) {
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function safeUrl(value) {
+    const url = String(value || "#");
+
+    if (
+        url.startsWith("plant-details.html?") ||
+        url.startsWith("https://www.perenual.com/")
+    ) {
+        return url;
+    }
+
+    return "#";
+}
+
+
+/* =====================================================
+   RENDER RESULTS
+===================================================== */
+
+function renderResults(results, personality, usingApi) {
+    const best = results[0];
+
+    if (!best) {
+        throw new Error("No matching plants available.");
+    }
+
+    let html = `
+        <div class="result-heading">
+            <span class="eyebrow">
+                YOUR GREEN MATCHES
+            </span>
+
+            <h2>
+                Plants selected for
+                <em>your lifestyle.</em>
+            </h2>
+
+            <p>
+                We compared your answers using
+                different care and lifestyle factors.
+            </p>
+
+            ${usingApi ? `
+                <p style="margin-top:10px; font-size:0.9rem;">
+                    ✦ Recommendations powered by the Aurelia Greens plant database.
+                </p>
+            ` : ""}
+        </div>
+
+        <div class="best-match">
+            <div class="best-match-image">
+                <img
+                    src="${escapeHTML(best.plant.image)}"
+                    alt="${escapeHTML(best.plant.name)}">
+            </div>
+
+            <div class="best-match-info">
+                <span class="best-label">
+                    ✦ BEST MATCH
+                </span>
+
+                <h3>
+                    ${escapeHTML(best.plant.name)}
+                </h3>
+
+                <div class="match-percentage">
+                    ${best.score}% Match
+                </div>
+
+                <div class="match-meter">
+                    <div
+                        class="match-meter-fill"
+                        style="width:${best.score}%">
+                    </div>
+                </div>
+
+                <p>
+                    ${escapeHTML(best.plant.description)}
+                </p>
+
+                <div class="why-match">
+                    <h4>
+                        Why it matches you
+                    </h4>
+    `;
+
+    const reasons = best.reasons.length
+        ? best.reasons.slice(0, 4)
+        : ["This plant has been selected from your overall preferences."];
+
+    reasons.forEach(function(reason) {
+        html += `
+            <p>
+                ✓ ${escapeHTML(reason)}
+            </p>
+        `;
+    });
+
+    html += `
+                </div>
+
+                <a
+                    href="${safeUrl(best.plant.link)}"
+                    class="btn btn-dark">
+                    Explore ${escapeHTML(best.plant.name)} →
+                </a>
+            </div>
+        </div>
+
+        <div class="personality-box">
+            <span class="eyebrow">
+                YOUR PLANT PERSONALITY
+            </span>
+
+            <h3>
+                ${escapeHTML(personality.title)}
+            </h3>
+
+            <p>
+                ${escapeHTML(personality.text)}
+            </p>
+        </div>
+
+        <div class="other-matches">
+            <h3 class="other-matches-title">
+                Other Good Matches
+            </h3>
+    `;
+
+    results.slice(1, 7).forEach(function(result) {
+        html += `
+            <div class="other-match-card">
+                <img
+                    src="${escapeHTML(result.plant.image)}"
+                    alt="${escapeHTML(result.plant.name)}">
+
+                <div>
+                    <h4>
+                        ${escapeHTML(result.plant.name)}
+                    </h4>
+
+                    <p>
+                        ${escapeHTML(result.plant.description)}
+                    </p>
+
+                    <a
+                        href="${safeUrl(result.plant.link)}"
+                        class="text-link">
+                        Learn More →
+                    </a>
+                </div>
+
+                <div class="other-score">
+                    ${result.score}%
+                    <small>
+                        MATCH
+                    </small>
+                </div>
+            </div>
+        `;
+    });
+
+    html += `
+        </div>
+
+        <div class="result-actions">
+            <button
+                type="button"
+                class="quiz-reset"
+                onclick="resetQuiz()">
+                ↻ Retake Quiz
+            </button>
+        </div>
+    `;
+
+    const resultBox = document.getElementById("quizResult");
+
+    resultBox.innerHTML = html;
+    resultBox.classList.add("show");
+
+    resultBox.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
 
 
 /* =====================================================
@@ -1614,511 +2274,81 @@ quizInputs.forEach(
 
 document
     .getElementById("plantQuiz")
-    .addEventListener(
-        "submit",
-        function(event) {
+    .addEventListener("submit", async function(event) {
+        event.preventDefault();
 
-            event.preventDefault();
+        const answers = {
+            light: getAnswer("light"),
+            water: getAnswer("water"),
+            experience: getAnswer("experience"),
+            style: getAnswer("style"),
+            space: getAnswer("space"),
+            humidity: getAnswer("humidity"),
+            pets: getAnswer("pets"),
+            maintenance: getAnswer("maintenance")
+        };
 
+        const resultBox = document.getElementById("quizResult");
 
-            const answers = {
+        resultBox.innerHTML = `
+            <div class="result-heading">
+                <span class="eyebrow">PLEASE WAIT</span>
+                <h2>
+                    Finding your
+                    <em>green matches.</em>
+                </h2>
+                <p>
+                    Checking the plant database against your answers...
+                </p>
+            </div>
+        `;
+        resultBox.classList.add("show");
 
-                light:
-                getAnswer("light"),
+        try {
+            let apiPlants = await loadQuizPlants();
 
-                water:
-                getAnswer("water"),
+            /* Keep the original 8 plants as part of the database too. */
+            const allPlants = [
+                ...Object.values(localPlants),
+                ...apiPlants
+            ];
 
-                experience:
-                getAnswer("experience"),
+            /* Remove duplicates by name. */
+            const uniquePlants = [];
+            const names = new Set();
 
-                style:
-                getAnswer("style"),
+            allPlants.forEach(function(plant) {
+                const key = plant.name.toLowerCase().trim();
 
-                space:
-                getAnswer("space"),
-
-                humidity:
-                getAnswer("humidity"),
-
-                pets:
-                getAnswer("pets"),
-
-                maintenance:
-                getAnswer("maintenance")
-
-            };
-
-
-
-            /* ---------------------------------------------
-               SCORE
-            --------------------------------------------- */
-
-            const results =
-                Object.values(plants)
-                .map(
-                    function(plant) {
-
-                        let score = 0;
-
-                        let reasons = [];
-
-
-                        Object.keys(weights)
-                        .forEach(
-                            function(category) {
-
-                                if (
-                                    plant.profile[category]
-                                    .includes(
-                                        answers[category]
-                                    )
-                                ) {
-
-                                    score +=
-                                        weights[category];
-
-
-                                    const reasonText = {
-
-                                        light:
-                                        "Your lighting preference fits this plant.",
-
-                                        water:
-                                        "Your watering routine suits its needs.",
-
-                                        experience:
-                                        "Its care level fits your experience.",
-
-                                        style:
-                                        "Its appearance matches your plant preference.",
-
-                                        space:
-                                        "Its size fits your available space.",
-
-                                        humidity:
-                                        "Your room humidity is suitable.",
-
-                                        pets:
-                                        "Its pet suitability matches your home.",
-
-                                        maintenance:
-                                        "Its maintenance level fits your lifestyle."
-
-                                    };
-
-
-                                    reasons.push(
-                                        reasonText[category]
-                                    );
-
-                                }
-
-                            }
-                        );
-
-
-                        return {
-
-                            plant:
-                            plant,
-
-                            score:
-                            score,
-
-                            reasons:
-                            reasons
-
-                        };
-
-                    }
-                );
-
-
-
-            /* ---------------------------------------------
-               SORT
-            --------------------------------------------- */
-
-            results.sort(
-                function(a, b) {
-
-                    return b.score - a.score;
-
+                if (!names.has(key)) {
+                    names.add(key);
+                    uniquePlants.push(plant);
                 }
-            );
-
-
-
-            const best =
-                results[0];
-
-
-
-            /* ---------------------------------------------
-               PERSONALITY
-            --------------------------------------------- */
-
-            let personality;
-
-
-            if (
-                answers.maintenance === "low" &&
-                answers.water === "low"
-            ) {
-
-                personality = {
-
-                    title:
-                    "The Easygoing Plant Parent",
-
-                    text:
-                    "You prefer plants that fit naturally into a busy lifestyle without demanding constant attention."
-
-                };
-
-            }
-
-            else if (
-                answers.experience === "expert" ||
-                answers.maintenance === "high"
-            ) {
-
-                personality = {
-
-                    title:
-                    "The Dedicated Plant Parent",
-
-                    text:
-                    "You enjoy caring for plants and are comfortable giving them the extra attention they need to thrive."
-
-                };
-
-            }
-
-            else if (
-                answers.style === "flower"
-            ) {
-
-                personality = {
-
-                    title:
-                    "The Bloom Lover",
-
-                    text:
-                    "You are drawn to plants that bring color, softness and beautiful natural details into your space."
-
-                };
-
-            }
-
-            else if (
-                answers.style === "statement"
-            ) {
-
-                personality = {
-
-                    title:
-                    "The Green Statement Maker",
-
-                    text:
-                    "You love plants that become a visual centerpiece and transform the personality of a room."
-
-                };
-
-            }
-
-            else {
-
-                personality = {
-
-                    title:
-                    "The Balanced Plant Parent",
-
-                    text:
-                    "You like a healthy balance between beautiful plants and manageable everyday care."
-
-                };
-
-            }
-
-
-
-            /* ---------------------------------------------
-               RESULT HEADER
-            --------------------------------------------- */
-
-            let html = `
-
-                <div class="result-heading">
-
-                    <span class="eyebrow">
-                        YOUR GREEN MATCHES
-                    </span>
-
-                    <h2>
-                        Plants selected for
-                        <em>your lifestyle.</em>
-                    </h2>
-
-                    <p>
-                        We compared your answers using
-                        different care and lifestyle factors.
-                    </p>
-
-                </div>
-
-
-                <!-- BEST MATCH -->
-
-                <div class="best-match">
-
-                    <div class="best-match-image">
-
-                        <img
-                            src="${best.plant.image}"
-                            alt="${best.plant.name}"
-                            onerror="imageError(this)">
-
-                    </div>
-
-
-                    <div class="best-match-info">
-
-                        <span class="best-label">
-                            ✦ BEST MATCH
-                        </span>
-
-
-                        <h3>
-                            ${best.plant.name}
-                        </h3>
-
-
-                        <div class="match-percentage">
-
-                            ${best.score}% Match
-
-                        </div>
-
-
-                        <div class="match-meter">
-
-                            <div
-                                class="match-meter-fill"
-                                style="width:${best.score}%">
-                            </div>
-
-                        </div>
-
-
-                        <p>
-                            ${best.plant.description}
-                        </p>
-
-
-                        <div class="why-match">
-
-                            <h4>
-                                Why it matches you
-                            </h4>
-
-            `;
-
-
-            best.reasons
-                .slice(0, 4)
-                .forEach(
-                    function(reason) {
-
-                        html += `
-
-                            <p>
-                                ✓ ${reason}
-                            </p>
-
-                        `;
-
-                    }
-                );
-
-
-            html += `
-
-                        </div>
-
-
-                        <a
-                            href="${best.plant.link}"
-                            class="btn btn-dark">
-
-                            Explore ${best.plant.name} →
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- PERSONALITY -->
-
-                <div class="personality-box">
-
-                    <span class="eyebrow">
-                        YOUR PLANT PERSONALITY
-                    </span>
-
-                    <h3>
-                        ${personality.title}
-                    </h3>
-
-                    <p>
-                        ${personality.text}
-                    </p>
-
-                </div>
-
-
-
-                <!-- OTHER MATCHES -->
-
-                <div class="other-matches">
-
-                    <h3 class="other-matches-title">
-                        Other Good Matches
-                    </h3>
-
-            `;
-
-
-
-            /* ---------------------------------------------
-               ALL OTHER RESULTS
-            --------------------------------------------- */
-
-            results
-                .slice(1)
-                .forEach(
-                    function(result) {
-
-                        html += `
-
-                            <div class="other-match-card">
-
-                                <img
-                                    src="${result.plant.image}"
-                                    alt="${result.plant.name}"
-                                    onerror="imageError(this)">
-
-
-                                <div>
-
-                                    <h4>
-                                        ${result.plant.name}
-                                    </h4>
-
-                                    <p>
-                                        ${result.plant.description}
-                                    </p>
-
-                                    <a
-                                        href="${result.plant.link}"
-                                        class="text-link">
-
-                                        Learn More →
-
-                                    </a>
-
-                                </div>
-
-
-                                <div class="other-score">
-
-                                    ${result.score}%
-
-                                    <small>
-                                        MATCH
-                                    </small>
-
-
-                                    <div class="mini-meter">
-
-                                        <div
-                                            class="mini-meter-fill"
-                                            style="width:${result.score}%">
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        `;
-
-                    }
-                );
-
-
-
-            html += `
-
-                </div>
-
-
-                <div class="result-actions">
-
-                    <button
-                        type="button"
-                        class="quiz-reset"
-                        onclick="resetQuiz()">
-
-                        ↻ Retake Quiz
-
-                    </button>
-
-                </div>
-
-            `;
-
-
-
-            /* ---------------------------------------------
-               DISPLAY
-            --------------------------------------------- */
-
-            const resultBox =
-                document.getElementById(
-                    "quizResult"
-                );
-
-
-            resultBox.innerHTML =
-                html;
-
-
-            resultBox.classList.add(
-                "show"
-            );
-
-
-            resultBox.scrollIntoView({
-
-                behavior:
-                "smooth",
-
-                block:
-                "start"
-
             });
 
-        }
-    );
+            const results = calculateResults(uniquePlants, answers);
+            const personality = getPersonality(answers);
 
+            renderResults(results, personality, apiPlants.length > 0);
+
+        } catch (error) {
+            console.error("Quiz API error:", error);
+
+            /* API fails -> original 8-plant quiz still works. */
+            const fallbackResults = calculateResults(
+                Object.values(localPlants),
+                answers
+            );
+
+            const personality = getPersonality(answers);
+
+            renderResults(
+                fallbackResults,
+                personality,
+                false
+            );
+        }
+    });
 
 
 /* =====================================================
@@ -2126,48 +2356,23 @@ document
 ===================================================== */
 
 function resetQuiz() {
-
     document
         .getElementById("plantQuiz")
         .reset();
 
+    const resultBox = document.getElementById("quizResult");
 
-    const resultBox =
-        document.getElementById(
-            "quizResult"
-        );
+    resultBox.innerHTML = "";
+    resultBox.classList.remove("show");
 
-
-    resultBox.innerHTML =
-        "";
-
-
-    resultBox.classList.remove(
-        "show"
-    );
-
-
-    progressBar.style.width =
-        "0%";
-
-
-    progressPercent.innerText =
-        "0%";
-
-
-    questionCounter.innerText =
-        "Question 1 of 8";
-
+    progressBar.style.width = "0%";
+    progressPercent.innerText = "0%";
+    questionCounter.innerText = "Question 1 of 8";
 
     window.scrollTo({
-
         top: 0,
-
-        behavior:
-        "smooth"
-
+        behavior: "smooth"
     });
-
 }
 
 </script>
