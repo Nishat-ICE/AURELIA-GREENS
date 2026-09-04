@@ -16,7 +16,126 @@
 
     <link rel="stylesheet" href="style.css">
 
+
+    <!-- =====================================================
+         API SEARCH ONLY
+         Existing design is not changed
+    ====================================================== -->
+
+    <style>
+
+        /* API RESULTS
+           This section only appears when API search returns data.
+        */
+
+        #apiResultsSection {
+            display: none;
+            margin-top: 70px;
+        }
+
+        #apiResultsSection.show {
+            display: block;
+        }
+
+        .api-results-heading {
+            margin-bottom: 28px;
+        }
+
+        .api-results-heading .eyebrow {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .api-results-heading h2 {
+            margin: 0;
+        }
+
+        #apiResultsGrid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .api-plant-card {
+            background: #ffffff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(23, 59, 42, 0.08);
+        }
+
+        .api-plant-image {
+            height: 260px;
+            overflow: hidden;
+            background: #edf3ee;
+        }
+
+        .api-plant-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .api-plant-info {
+            padding: 22px;
+        }
+
+        .api-plant-info .plant-type {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .api-plant-info h3 {
+            margin-bottom: 8px;
+        }
+
+        .api-plant-info p {
+            margin-bottom: 14px;
+        }
+
+        .api-loading,
+        .api-error,
+        .api-empty {
+            display: none;
+            text-align: center;
+            margin-top: 25px;
+            padding: 20px;
+        }
+
+        .api-loading.show,
+        .api-error.show,
+        .api-empty.show {
+            display: block;
+        }
+
+        .api-loading {
+            color: #173b2a;
+        }
+
+        .api-error {
+            color: #8a3d3d;
+        }
+
+        @media (max-width: 1000px) {
+
+            #apiResultsGrid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            #apiResultsGrid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
@@ -73,7 +192,6 @@
 </header>
 
 
-
 <!-- =====================================================
      PAGE HERO
 ===================================================== -->
@@ -95,7 +213,6 @@
     </p>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -129,7 +246,6 @@
     </div>
 
 
-
     <!-- CATEGORY -->
 
     <div class="category-bar">
@@ -161,12 +277,13 @@
     </div>
 
 
-
-    <!-- PLANT GRID -->
+    <!-- =================================================
+         STATIC PLANT GRID
+         Existing plants/design unchanged
+    ================================================== -->
 
     <div class="plant-grid large-grid"
          id="plantGrid">
-
 
 
         <!-- =================================================
@@ -179,7 +296,7 @@
             <div class="plant-image">
 
                 <img
-                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Monstera%20deliciosa.jpg"
+                    src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=900&q=85"
                     alt="Monstera Deliciosa">
 
                 <span class="plant-tag">
@@ -215,7 +332,6 @@
         </article>
 
 
-
         <!-- =================================================
              SNAKE PLANT
         ================================================== -->
@@ -226,7 +342,7 @@
             <div class="plant-image">
 
                 <img
-                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Snake%20plant%20%28Sansevieria%20trifasciata%29.jpg"
+                    src="https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?auto=format&fit=crop&w=900&q=85"
                     alt="Snake Plant">
 
                 <span class="plant-tag">
@@ -262,7 +378,6 @@
         </article>
 
 
-
         <!-- =================================================
              FIDDLE LEAF FIG
         ================================================== -->
@@ -273,7 +388,7 @@
             <div class="plant-image">
 
                 <img
-                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Ficus%20lyrata%20DSCN4457.jpg"
+                    src="https://images.unsplash.com/photo-1597055181300-4a8a9f7c4e4f?auto=format&fit=crop&w=900&q=85"
                     alt="Fiddle Leaf Fig">
 
                 <span class="plant-tag">
@@ -309,7 +424,6 @@
         </article>
 
 
-
         <!-- =================================================
              PEACE LILY
         ================================================== -->
@@ -320,7 +434,7 @@
             <div class="plant-image">
 
                 <img
-                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Peace%20lily%20--%20Spathiphyllum.jpg"
+                    src="https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=900&q=85"
                     alt="Peace Lily">
 
                 <span class="plant-tag">
@@ -356,7 +470,6 @@
         </article>
 
 
-
         <!-- =================================================
              SUCCULENT
         ================================================== -->
@@ -367,7 +480,7 @@
             <div class="plant-image">
 
                 <img
-                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Succulentplant.jpg"
+                    src="https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=900&q=85"
                     alt="Succulent">
 
                 <span class="plant-tag">
@@ -403,7 +516,6 @@
         </article>
 
 
-
         <!-- =================================================
              CALATHEA
         ================================================== -->
@@ -414,7 +526,7 @@
             <div class="plant-image">
 
                 <img
-                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Calathea%20orbifolia.jpg"
+                    src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=900&q=85"
                     alt="Calathea Orbifolia">
 
                 <span class="plant-tag">
@@ -450,7 +562,6 @@
         </article>
 
 
-
         <!-- =================================================
              POTHOS
         ================================================== -->
@@ -461,7 +572,7 @@
             <div class="plant-image">
 
                 <img
-                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Epipremnum%20aureum%20%28Golden%20Pothos%29.jpg"
+                    src="https://images.unsplash.com/photo-1614594576850-4b6e7f6f3c7a?auto=format&fit=crop&w=900&q=85"
                     alt="Golden Pothos">
 
                 <span class="plant-tag">
@@ -497,7 +608,6 @@
         </article>
 
 
-
         <!-- =================================================
              ZZ PLANT
         ================================================== -->
@@ -508,7 +618,7 @@
             <div class="plant-image">
 
                 <img
-                    src="https://commons.wikimedia.org/wiki/Special:Redirect/file/ZZ%20Plant%20%28Zamioculcas%20zamiifolia%29.jpg"
+                    src="https://images.unsplash.com/photo-1632207691143-8e1c0f2e3d5b?auto=format&fit=crop&w=900&q=85"
                     alt="ZZ Plant">
 
                 <span class="plant-tag">
@@ -547,6 +657,45 @@
     </div>
 
 
+    <!-- =====================================================
+         API RESULTS
+         Only appears when searching new plants
+    ====================================================== -->
+
+    <div id="apiResultsSection">
+
+        <div class="api-results-heading">
+
+            <span class="eyebrow">
+                FROM PLANT DATABASE
+            </span>
+
+            <h2>
+                More plants to <em>explore.</em>
+            </h2>
+
+        </div>
+
+
+        <div id="apiResultsGrid"></div>
+
+
+        <div id="apiLoading" class="api-loading">
+            Searching plant database...
+        </div>
+
+
+        <div id="apiError" class="api-error">
+            Unable to load plant data right now.
+        </div>
+
+
+        <div id="apiEmpty" class="api-empty">
+            No additional plants found.
+        </div>
+
+    </div>
+
 
     <!-- NO RESULT -->
 
@@ -567,8 +716,8 @@
 
     </div>
 
-</section>
 
+</section>
 
 
 <!-- =====================================================
@@ -599,7 +748,6 @@
     </a>
 
 </section>
-
 
 
 <!-- =====================================================
@@ -654,7 +802,6 @@
     </div>
 
 
-
     <div class="footer-bottom">
 
         <span>
@@ -670,9 +817,8 @@
 </footer>
 
 
-
 <!-- =====================================================
-     SEARCH JAVASCRIPT
+     SEARCH + API JAVASCRIPT
 ===================================================== -->
 
 <script>
@@ -690,25 +836,333 @@ const searchMessage =
     document.getElementById("searchMessage");
 
 
+/* API ELEMENTS */
+
+const apiResultsSection =
+    document.getElementById("apiResultsSection");
+
+const apiResultsGrid =
+    document.getElementById("apiResultsGrid");
+
+const apiLoading =
+    document.getElementById("apiLoading");
+
+const apiError =
+    document.getElementById("apiError");
+
+const apiEmpty =
+    document.getElementById("apiEmpty");
+
+
+/* =====================================================
+   SEARCH CONTROL
+===================================================== */
+
+let searchTimer = null;
+let currentRequest = 0;
+
+
+/* =====================================================
+   ESCAPE HTML
+   Prevents unsafe API text from being inserted.
+===================================================== */
+
+function escapeHTML(value) {
+
+    if (!value) {
+        return "";
+    }
+
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+/* =====================================================
+   HIDE API RESULTS
+===================================================== */
+
+function hideApiResults() {
+
+    apiResultsSection.classList.remove("show");
+
+    apiResultsGrid.innerHTML = "";
+
+    apiLoading.classList.remove("show");
+
+    apiError.classList.remove("show");
+
+    apiEmpty.classList.remove("show");
+
+}
+
+
+/* =====================================================
+   RENDER API RESULTS
+===================================================== */
+
+function renderApiResults(plants) {
+
+    apiResultsGrid.innerHTML = "";
+
+
+    if (!plants || plants.length === 0) {
+
+        apiEmpty.classList.add("show");
+
+        apiResultsSection.classList.add("show");
+
+        return;
+
+    }
+
+
+    plants.forEach(function (plant) {
+
+        const commonName =
+            plant.common_name ||
+            "Unknown Plant";
+
+
+        const scientificName =
+            Array.isArray(plant.scientific_name)
+                ? plant.scientific_name[0]
+                : (
+                    plant.scientific_name ||
+                    ""
+                );
+
+
+        const family =
+            plant.family ||
+            "Plant species";
+
+
+        const image =
+            plant.default_image &&
+            (
+                plant.default_image.regular_url ||
+                plant.default_image.medium_url ||
+                plant.default_image.small_url
+            );
+
+
+        const imageURL =
+            image ||
+            "https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85";
+
+
+        const card =
+            document.createElement("article");
+
+
+        card.className =
+            "api-plant-card";
+
+
+        card.innerHTML = `
+
+            <div class="api-plant-image">
+
+                <img
+                    src="${escapeHTML(imageURL)}"
+                    alt="${escapeHTML(commonName)}"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="api-plant-info">
+
+                <span class="plant-type">
+                    ${escapeHTML(family)}
+                </span>
+
+                <h3>
+                    ${escapeHTML(commonName)}
+                </h3>
+
+                <p>
+                    ${escapeHTML(scientificName)}
+                </p>
+
+                ${
+                    plant.id
+                    ? `
+                        <a
+                            href="https://www.perenual.com/plant-species-database-search-finder/species/${encodeURIComponent(plant.id)}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-link">
+
+                            View plant details →
+
+                        </a>
+                      `
+                    : ""
+                }
+
+            </div>
+
+        `;
+
+
+        apiResultsGrid.appendChild(card);
+
+    });
+
+
+    apiResultsSection.classList.add("show");
+
+}
+
+
+/* =====================================================
+   SEARCH PERENUAL THROUGH OUR SECURE API
+===================================================== */
+
+async function searchPlantAPI(query) {
+
+    const requestNumber =
+        ++currentRequest;
+
+
+    apiResultsSection.classList.add("show");
+
+    apiLoading.classList.add("show");
+
+    apiError.classList.remove("show");
+
+    apiEmpty.classList.remove("show");
+
+    apiResultsGrid.innerHTML = "";
+
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/search?q=" +
+                encodeURIComponent(query)
+            );
+
+
+        const data =
+            await response.json();
+
+
+        /*
+            Ignore old requests.
+
+            Example:
+            User searches "rose"
+            then quickly searches "orchid".
+
+            If "rose" returns later,
+            it will not overwrite "orchid".
+        */
+
+        if (
+            requestNumber !== currentRequest
+        ) {
+            return;
+        }
+
+
+        apiLoading.classList.remove("show");
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                data.error ||
+                "API request failed."
+            );
+
+        }
+
+
+        const results =
+            Array.isArray(data.data)
+                ? data.data
+                : [];
+
+
+        renderApiResults(results);
+
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Plant search error:",
+            error
+        );
+
+
+        if (
+            requestNumber !== currentRequest
+        ) {
+            return;
+        }
+
+
+        apiLoading.classList.remove("show");
+
+        apiResultsGrid.innerHTML = "";
+
+        apiError.classList.add("show");
+
+        apiResultsSection.classList.add("show");
+
+    }
+
+}
+
+
+/* =====================================================
+   MAIN SEARCH
+===================================================== */
+
 searchInput.addEventListener(
     "input",
     function () {
 
         const searchValue =
             this.value
-            .toLowerCase()
-            .trim();
+                .toLowerCase()
+                .trim();
+
+
+        /*
+            Clear previous timer.
+
+            This prevents an API request
+            on every single keystroke.
+        */
+
+        clearTimeout(searchTimer);
 
 
         let found = 0;
 
+
+        /* ================================================
+           LOCAL PLANTS
+        ================================================= */
 
         plantCards.forEach(
             function (card) {
 
                 const plantName =
                     card.dataset.name
-                    .toLowerCase();
+                        .toLowerCase();
 
 
                 if (
@@ -735,6 +1189,10 @@ searchInput.addEventListener(
         );
 
 
+        /* ================================================
+           EMPTY SEARCH
+        ================================================= */
+
         if (
             searchValue === ""
         ) {
@@ -742,41 +1200,115 @@ searchInput.addEventListener(
             searchMessage.innerText =
                 "Explore our plant collection";
 
-        }
 
-        else {
+            /*
+                Show all local plants.
+            */
 
-            searchMessage.innerText =
-                found +
-                " plant" +
-                (found !== 1 ? "s" : "") +
-                " found";
+            plantCards.forEach(
+                function (card) {
 
-        }
+                    card.style.display =
+                        "";
 
-
-        if (found === 0) {
-
-            noPlant.classList.add(
-                "show"
+                }
             );
 
-        }
-
-        else {
 
             noPlant.classList.remove(
                 "show"
             );
 
+
+            hideApiResults();
+
+
+            return;
+
         }
+
+
+        /* ================================================
+           LOCAL RESULT MESSAGE
+        ================================================= */
+
+        if (found > 0) {
+
+            searchMessage.innerText =
+                found +
+                " plant" +
+                (
+                    found !== 1
+                        ? "s"
+                        : ""
+                ) +
+                " found";
+
+        }
+
+        else {
+
+            searchMessage.innerText =
+                "Searching plant database...";
+
+        }
+
+
+        /*
+            Hide local no-result temporarily.
+
+            API may find the searched plant.
+        */
+
+        noPlant.classList.remove(
+            "show"
+        );
+
+
+        /* ================================================
+           DON'T CALL API FOR 1 CHARACTER
+        ================================================= */
+
+        if (
+            searchValue.length < 2
+        ) {
+
+            hideApiResults();
+
+            return;
+
+        }
+
+
+        /* ================================================
+           API SEARCH
+           700ms debounce
+        ================================================= */
+
+        searchTimer =
+            setTimeout(
+                function () {
+
+                    searchPlantAPI(
+                        searchValue
+                    );
+
+                },
+                700
+            );
 
     }
 );
+
+
+/* =====================================================
+   INITIAL STATE
+===================================================== */
+
+hideApiResults();
 
 </script>
 
 
 </body>
-
 </html>
